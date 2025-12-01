@@ -1,19 +1,4 @@
-:root {
-  --primary-color: #646cff;
-  --bg-gradient: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-  --glass-bg: rgba(255, 255, 255, 0.05);
-  --glass-border: rgba(255, 255, 255, 0.1);
-  --text-main: #ffffff;
-  --text-secondary: #a0a0a0;
-}
-
-body {
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-  background: var(--bg-gradient);
-  color: var(--text-main);
-  min-height: 100vh;
-}
+/* Inherit variables from App.css */
 
 .signin-container {
   display: flex;
@@ -38,8 +23,15 @@ body {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 h2 {
@@ -49,7 +41,7 @@ h2 {
 }
 
 .subtitle {
-  color: var(--text-secondary);
+  color: var(--text-muted);
   margin-bottom: 30px;
 }
 
@@ -110,9 +102,10 @@ input:focus {
 }
 
 .divider span {
-  background: #1a1a2e; /* Match approximate bg for readability */
+  background: var(--bg-color);
+  /* Match approximate bg for readability */
   padding: 0 10px;
-  color: var(--text-secondary);
+  color: var(--text-muted);
   position: relative;
   font-size: 0.9rem;
 }
@@ -142,14 +135,15 @@ input:focus {
   background: rgba(255, 255, 255, 0.1);
 }
 
-.social-btn img, .social-btn svg {
+.social-btn img,
+.social-btn svg {
   width: 20px;
   height: 20px;
 }
 
 .toggle-auth {
   margin-top: 25px;
-  color: var(--text-secondary);
+  color: var(--text-muted);
   font-size: 0.9rem;
 }
 
